@@ -27,6 +27,11 @@ class PixTransaction extends AbstractTransaction
     protected $pixAdditionalFields;
 
     /**
+     * @var string
+     */
+    protected $pixData;
+
+    /**
      * @param array $transactionData
      */
     public function __construct($transactionData)
@@ -69,5 +74,14 @@ class PixTransaction extends AbstractTransaction
     public function getPixAdditionalFields()
     {
         return $this->pixAdditionalFields;
+    }
+
+    /**
+     * @return string
+     * @codeCoverageIgnore
+     */
+    public function getPixData()
+    {
+        return $this->pixData;
     }
 }
